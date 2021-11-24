@@ -1,0 +1,114 @@
+_BASE_: '../base/base.yml'
+
+ATTRIBUTE:
+  ENABLED: True
+
+BACKGROUND:
+  FIX_RESOLUTION_PER_IMAGE:
+    ENABLED: False
+    SAVE_JSON_PATH: ''
+  ROOT: data/bg_collection/coco_train_crop_20210714
+  USE_CAMERA_GROUP: False
+
+CAMERA:
+  DISTANCE:
+    RANDOM:
+      LOWER_BOUND: -1.0
+      UPPER_BOUND: 3.0
+  ELEV:
+    RANDOM:
+      LOWER_BOUND: 10
+      UPPER_BOUND: 45
+  ROTATION_EULER_X_BIAS:
+    RANDOM:
+      LOWER_BOUND: -0.025
+      UPPER_BOUND: 0.028
+  ROTATION_EULER_Z_BIAS:
+    BIAS: 0.0
+    RANDOM:
+      ENABLE: False
+  ROTATION_EULER_Y_BIAS:
+    BIAS: 0.00
+    RANDOM:
+      ENABLE: False
+      USE_GAUSS: True
+      MU: 0
+      SIGMA: 0.12
+
+COMPOSITE:
+  SHIELD_V2:
+    ENABLED: False
+    ROOT: 'data/shield_v2/0621'
+    NUM_LIMIT: -1
+    PROB: 0.1
+    FIX_RESOLUTION_PER_IMAGE:
+      ENABLED: True
+      SAVE_JSON_PATH: 'data/shield_v2/0621/_info.json'
+
+LIGHT:
+  AZIM:
+    RANDOM_LOWER_BOUND: -75
+    RANDOM_UPPER_BOUND: 75
+  ELEV:
+    BASE: 70
+    RANDOM:
+      ENABLED: True
+      USE_GAUSS: True
+      SIGMA: 0
+      MU: 3
+  DISTANCE:
+    RATIO_TO_CAMERA_DISTANCE: 0.7
+        
+OPTION:
+  APPLY_CAMERA_WORLD_COLOR:
+    ENABLE: True
+    VALUES: [
+        [0.20, 0.20, 0.05, 0.2],
+        [0.20, 0.05, 0.05, 0.2],
+        [0.05, 0.05, 0.20, 0.2],
+        [0.20, 0.05, 0.20, 0.2],
+        [0.05, 0.20, 0.20, 0.2],
+        [0.05, 0.20, 0.05, 0.2],
+        [0.35, 0.35, 0.35, 0.2],
+    ]
+
+PROCESS:
+  IMAGE_COUNT_PER_ID: 24  # not work anymore
+  FIRST_INDEX: 1
+  LAST_INDEX: 656
+  IMAGE_COUNT_PER_CAMERA: 5
+  TOTAL_CAMERA_COUNT: 10
+  CAMERA_COUNT_PER_ID: 5
+
+POSE:
+  ROOT: data/pose/pose_0708_standing02/
+  SERIALS: [
+    '02_01', '02_02', '02_03', '02_04', '02_05',
+    '07_01', '07_02', '07_03', '07_04', '07_05','07_06', '07_07', '07_08', '07_09', '07_10', '07_11', '07_12',
+    '08_01', '08_02', '08_03', '08_04', '08_05','08_06', '08_07', '08_08', '08_09', '08_10', '08_11',
+    # '13_01', '13_02', '13_03', 
+    # '141_17',
+    # '143_19',
+  ]
+
+RENDER:
+  RESOLUTION_PERCENTAGE:
+    BASE: 50
+    RANDOM_LOWER_BOUND: -30
+    RANDOM_UPPER_BOUND: 30
+  RESOLUTION_X:
+    BASE: 100
+    RANDOM_UPPER_BOUND: 0
+    RANDOM_LOWER_BOUND: 0
+  RESOLUTION_Y:
+    USE_RATIO:
+      ENABLED: True
+      RANDOM_UPPER_BOUND: 3.9
+      RANDOM_LOWER_BOUND: 2.0
+
+SOURCE:
+  ROOT: data/makehuman/makehuman_2954_mhx2_standing02
+
+OUTPUT_DIR_FOR_IMAGE: ''
+OUTPUT_DIR_FOR_ATTRIBUTE: ''
+

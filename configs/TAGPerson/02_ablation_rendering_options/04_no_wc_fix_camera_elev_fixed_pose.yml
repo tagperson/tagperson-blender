@@ -1,0 +1,15 @@
+CAMERA:
+  ELEV:
+    RANDOM:
+      LOWER_BOUND: 10
+      UPPER_BOUND: 10
+OPTION:
+  APPLY_CAMERA_WORLD_COLOR:
+    ENABLE: false
+OUTPUT_DIR_FOR_ATTRIBUTE: data/dataset_MakeHuman/makehuman_2954_tagp_no_wc_fix_camera_elev_fixed_pose-a
+OUTPUT_DIR_FOR_IMAGE: data/dataset_MakeHuman/makehuman_2954_tagp_no_wc_fix_camera_elev_fixed_pose
+POSE:
+  ROOT: data/pose/pose_0708_standing02/
+  SERIALS:
+  - '02_01'
+_BASE_: ../TAGPerson_base.yml

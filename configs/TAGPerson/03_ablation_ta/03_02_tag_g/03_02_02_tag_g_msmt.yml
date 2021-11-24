@@ -1,0 +1,11 @@
+ATTRIBUTE:
+  USE_DISTRIBUTION_FILE:
+    ENABLED: true
+    FILE_PATH: data/attribute_distribution/output_options_list_gamma_msmt_1027.json
+    LIMIT_FIELDS:
+    - gamma_value
+    RANDOM_SAMPLE:
+      ENABLED: true
+OUTPUT_DIR_FOR_ATTRIBUTE: data/dataset_MakeHuman/makehuman_2954_tagp_tag_g_msmt_20211117-a
+OUTPUT_DIR_FOR_IMAGE: data/dataset_MakeHuman/makehuman_2954_tagp_tag_g_msmt_20211117
+_BASE_: ../../TAGPerson_base.yml

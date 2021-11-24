@@ -1,0 +1,24 @@
+CAMERA:
+  ELEV:
+    RANDOM:
+      LOWER_BOUND: 10
+      UPPER_BOUND: 10
+LIGHT:
+  AZIM:
+    RANDOM_LOWER_BOUND: 0
+    RANDOM_UPPER_BOUND: 0
+OPTION:
+  APPLY_CAMERA_WORLD_COLOR:
+    ENABLE: false
+OUTPUT_DIR_FOR_ATTRIBUTE: data/dataset_MakeHuman/makehuman_2954_tagp_no_wc_fix_camera_elev_fixed_pose_fixed_illumination_fixed_resolution-a
+OUTPUT_DIR_FOR_IMAGE: data/dataset_MakeHuman/makehuman_2954_tagp_no_wc_fix_camera_elev_fixed_pose_fixed_illumination_fixed_resolution
+POSE:
+  ROOT: data/pose/pose_0708_standing02/
+  SERIALS:
+  - '02_01'
+RENDER:
+  RESOLUTION_PERCENTAGE:
+    BASE: 50
+    RANDOM_LOWER_BOUND: 0
+    RANDOM_UPPER_BOUND: 0
+_BASE_: ../TAGPerson_base.yml
