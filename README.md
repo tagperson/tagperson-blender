@@ -3,6 +3,9 @@ This repo contains the rendering codes of the paper `TAGPerson: A Target-Aware G
 
 We use [BlenderPy](https://github.com/TylerGubala/blenderpy) to render images under parameterized control.
 
+The training codes are in another project [tagperson-reid](https://github.com/tagperson/tagperson-reid), which uses PyTorhc to train the models.
+
+
 ## 1. Get Started
 
 #### 1.1 Install Python Environment
