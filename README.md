@@ -109,6 +109,21 @@ If the 3D human models in the `data/makehuman/` folder are not complete, you can
 PYTHONPATH=. python tools/batch_generate.py --config-file configs/TAGPerson/01_direct_transfer/tagp_base.yml PROCESS.FIRST_INDEX 193 PROCESS.LAST_INDEX 193
 ```
 
+## 4. Rendering Options
+We describe parts of the rendering options below.
+
+![Description of rendering options](static/rendering-options.png)
+
+We visualize some effects of changing different values for certain rendering options.
+
+![Camera Azimuth and Depression Angle](static/193_camera_azim_elev.gif)
+![Light Azimuth](static/193_light_azim.gif)
+![Light Depression Angle](static/193_light_elev.gif)
+![Color Bias](static/193_color_bias_continue.gif)
+![Color Bias](static/193_color_bias_continue_g.gif)
+![Color Bias](static/193_color_bias_continue_b.gif)
+
+Rendering options for each experiment can be found in the configure files in [this link](https://drive.google.com/drive/folders/1eiFvsk78OqxerKSceRkORTlk5B7EB3ao).
 
 
 
